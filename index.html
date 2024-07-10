@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+
+    <main class="main-wrapper" id="main-wrapper">
+      <picture>
+        <!-- Mobile hero image -->
+        <source
+          media="(max-width:767px)"
+          srcset="assets/images/illustration-sign-up-mobile.svg"
+        />
+        <!-- Desktop hero image -->
+        <source
+          media="(min-width:768px)"
+          srcset="assets/images/illustration-sign-up-desktop.svg"
+        />
+        <!-- Fallback image for browsers that do not support picture -->
+        <img
+          src=""
+          class="hero-img"
+          id="hero-img"
+          alt="Orange/red color hero image with tech images"
+        />
+      </picture>
+
+      <section class="form-wrapper" id="form-wrapper">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form id="form">
+          <div class="flex-row">
+            <label for="email" class="email-label"
+              ><small> Email address</small>
+            </label>
+            <p class="error-msg hidden" id="error-msg">Valid email required</p>
+          </div>
+          <input
+            id="email"
+            class="email-input"
+            name="email"
+            placeholder="email@company.com"
+          />
+          <button class="submit-btn" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div class="success-msg-wrapper hidden" id="success-msg-wrapper">
+      <img class="success-icon" src="assets/images/icon-success.svg" alt="" />
+      <h1 class="success-title">Thanks for subscribing!</h1>
+      <p class="success-text">
+        A confirmation email has been sent to
+        <span class="user-email" id="user-email">ash@loremcompany.com</span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss-btn" id="dismiss-btn">Dismiss message</button>
+    </div>
+
+    <!-- Success message end -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
